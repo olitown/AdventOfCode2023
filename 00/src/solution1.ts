@@ -9,7 +9,7 @@ console.log('Input:', input);
 console.log('Lines:', lines);
 
 export const solution1 = () => {
-  const valueList = lines.map((line) => parseInt(line, 10));
+  const  valueList = lines.map((line) => parseInt(line, 10));
   const greeting = 'Hello TEST!';
   return greeting;
 };
