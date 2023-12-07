@@ -6,7 +6,7 @@ const input: string = readFileSync(
   'utf-8'
 );
 
-console.log('Input:', input);
+//console.log('Input:', input);
 
 const calcDist = (holdTime: number, raceTime: number): number => {
   const travelTime: number = raceTime - holdTime;
@@ -16,6 +16,7 @@ const calcDist = (holdTime: number, raceTime: number): number => {
 };
 
 export const solution1 = () => {
+  const startTime:number = Date.now(); 
   let result: number = 1;
   const lines = input.split('\r\n');
 
@@ -65,6 +66,7 @@ export const solution1 = () => {
     const numWinRaces = lastWinTime - firstWinTime + 1;
     result = result * numWinRaces;
   }
-  console.log('result', result);
+  const endTime:number = Date.now(); 
+  console.log('result', result, "time", endTime-startTime);
   return result;
 };

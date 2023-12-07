@@ -16,6 +16,7 @@ const calcDist = (holdTime: number, raceTime: number): number => {
 };
 
 export const solution2 = () => {
+  const startTime:number = Date.now(); 
   let result: number = 1;
   const lines = input.split('\r\n');
 
@@ -63,7 +64,7 @@ export const solution2 = () => {
 
   const numWinRaces = lastWinTime - firstWinTime + 1;
   result = result * numWinRaces;
-
-  console.log('result', result);
+  const endTime:number = Date.now(); 
+  console.log('result', result, "time", endTime-startTime);
   return result;
 };
